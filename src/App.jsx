@@ -3,7 +3,7 @@ import { useState } from 'react'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Profile from './component/profile'
 import Login from './component/Login'
-import { useNavigate } from 'react-router-dom';
+
 
 
 
@@ -11,13 +11,6 @@ const App = () => {
   const [userName, setUserName] = useState('')
   const [password, setPassword] = useState('')
   const [loginDetails, setLoginDetails] = useState([])
-
-
-
-
-
-
-
   function onSubmit(e) {
     e.preventDefault()
     setLoginDetails((prevDetails) => {

@@ -1,9 +1,11 @@
 import React from "react";
 import { useState } from "react";
 // import { Link } from "react-router-dom";
+import { useNavigate } from 'react-router-dom';
 
 const Login = ({ onSubmit, userName, setUserName, password, setPassword }) => {
   const [loginstate, setLoginState] = useState(false);
+  const navigate = useNavigate();
 
   return (
     <div className="w-full h-screen bg-amber-200 flex justify-center items-center">
@@ -39,6 +41,8 @@ const Login = ({ onSubmit, userName, setUserName, password, setPassword }) => {
             className="w-full bg-blue-500 text-white px-4 py-2 rounded-sm mt-4"
             type="submit"
             onClick={() => setLoginState(false)}
+            onClick={() => navigate('/profile')}
+
           >
             Sign In
           </button>
